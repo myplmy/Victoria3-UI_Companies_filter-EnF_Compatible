@@ -168,10 +168,10 @@
 	# 건물 선택 그리드
 	type building_filter_grid = widget {
 		visible = "[GetVariableSystem.Exists('show_building_type_filter')]"
-		size = { 540 750 }
+		size = { 540 850 }
 		
 		scrollarea = {
-			size = { 540 750 }
+			size = { 540 850 }
 			scrollbarpolicy_horizontal = always_off
 			
 			scrollbar_vertical = {
@@ -908,8 +908,56 @@
                             }
                         }
                     }
-                    
+            
                 }
+
+                divider_clean = { size = { 520 2 } }
+                
+                # E&F
+                textbox = {
+                    size = { 520 10 }
+                    align = left|vcenter
+                    raw_text = "E&F"
+                    default_format = "#bold"
+                    fontsize = 16
+                }
+
+                flowcontainer = {
+                    direction = horizontal
+                    spacing = 5
+                    parentanchor = left
+                    # building_ef_private_construction 
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/ef_private_construction.dds"
+                        onclick = "[GetScriptedGui('com_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_ef_private_construction').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_ef_private_construction').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                    # building_silver_mine
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/silver_mine.dds"
+                        onclick = "[GetScriptedGui('com_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_silver_mine').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_silver_mine').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                }
+
             }
 		}
 	}
@@ -1221,10 +1269,10 @@ types company_attainable_building_filter_types
 	# 건물 선택 그리드
 	type building_filter_att_grid = widget {
 		visible = "[GetVariableSystem.Exists('show_att_building_type_filter')]"
-		size = { 540 750 }
+		size = { 540 850 }
 		
 		scrollarea = {
-			size = { 540 750 }
+			size = { 540 850 }
 			scrollbarpolicy_horizontal = always_off
 			
 			scrollbar_vertical = {
@@ -1965,6 +2013,55 @@ types company_attainable_building_filter_types
                     }
                     
                 }
+
+                divider_clean = { size = { 520 2 } }
+                
+                # E&F
+                textbox = {
+                    size = { 520 10 }
+                    align = left|vcenter
+                    raw_text = "E&F"
+                    default_format = "#bold"
+                    fontsize = 16
+                }
+
+                flowcontainer = {
+                    direction = horizontal
+                    spacing = 5
+                    parentanchor = left
+                    # building_ef_private_construction 
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/ef_private_construction.dds"
+                        onclick = "[GetScriptedGui('com_att_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_ef_private_construction').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_att_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_ef_private_construction').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                    # building_silver_mine
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/silver_mine.dds"
+                        onclick = "[GetScriptedGui('com_att_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_silver_mine').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_att_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_silver_mine').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
             }
 		}
 	}
@@ -2140,10 +2237,10 @@ types company_potential_building_filter_types
 	# 건물 선택 그리드
 	type building_filter_pot_grid = widget {
 		visible = "[GetVariableSystem.Exists('show_pot_building_type_filter')]"
-		size = { 540 750 }
+		size = { 540 850 }
 		
 		scrollarea = {
-			size = { 540 750 }
+			size = { 540 850 }
 			scrollbarpolicy_horizontal = always_off
 			
 			scrollbar_vertical = {
@@ -2884,6 +2981,55 @@ types company_potential_building_filter_types
                     }
                     
                 }
+
+                divider_clean = { size = { 520 2 } }
+                
+                # E&F
+                textbox = {
+                    size = { 520 10 }
+                    align = left|vcenter
+                    raw_text = "E&F"
+                    default_format = "#bold"
+                    fontsize = 16
+                }
+
+                flowcontainer = {
+                    direction = horizontal
+                    spacing = 5
+                    parentanchor = left
+                    # building_ef_private_construction 
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/ef_private_construction.dds"
+                        onclick = "[GetScriptedGui('com_pot_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_ef_private_construction').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_pot_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_ef_private_construction').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                    # building_silver_mine
+                    button = {
+                        size = { 50 50 }
+                        texture = "gfx/interface/icons/building_icons/silver_mine.dds"
+                        onclick = "[GetScriptedGui('com_pot_set_filter').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('building_type', GetBuildingType('building_silver_mine').MakeScope).End)]"
+                        onclick = "[GetVariableSystem.Clear('show_pot_building_type_filter')]"
+                        tooltipwidget = {
+                            RegularTooltip = {
+                                blockoverride "text" {
+                                    text = "[GetBuildingType('building_silver_mine').GetName]"
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
             }
 		}
 	}
